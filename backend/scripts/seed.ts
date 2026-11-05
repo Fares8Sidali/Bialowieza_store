@@ -178,7 +178,7 @@ async function main() {
     category: p.category,
     description: p.description,
     price: p.price,
-    currency: "DZD",
+    currency: "usd",
     imageUrl: p.imageUrl,
     active: true,
   }));
