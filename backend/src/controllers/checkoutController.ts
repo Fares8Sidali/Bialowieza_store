@@ -80,7 +80,7 @@ export async function createCheckout(req:Request,res:Response,next:NextFunction)
                                     userId:localUser.id,
                                     lines,
                                     total,
-                                    currency:"DZD",
+                                    currency:"usd",
                                   }).returning()
 
     const successUrl = `${env.FRONTEND_URL}/checkout/return?checkout_id={CHECKOUT_ID}`
@@ -93,7 +93,7 @@ export async function createCheckout(req:Request,res:Response,next:NextFunction)
             [env.POLAR_CHECKOUT_PRODUCT_ID]:[
                 {
                     amount_type:"fixed",
-                    price_currency:"dzd",
+                    price_currency:"usd",
                     price_amount:total
                 }
             ]
